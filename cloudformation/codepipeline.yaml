@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Creates a pipeline that deploys our API
+
+Parameters:
+  ProjectName:
+    Type: String
+  S3Bucket:
+    Type: String
+  RoleArn:
+    Type: String
+  RepoOwner:
+    Type: String
+  RepoName:
+    Type: String
+  BranchName:
+    Type: String
+  GithubOAuthToken:
+    Type: String
+
+Resources: 
+  MyPipeline:
+    Type: AWS::CodePipeline::Pipeline
+    Properties:
